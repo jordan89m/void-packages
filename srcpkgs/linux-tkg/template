@@ -540,11 +540,7 @@ echo "
   CFLAGS=${CFLAGS/-O2/}
   CFLAGS+=" ${_compiler_opt}"
 
-  if [[ "$_sub" = rc* ]]; then
-    cd ${wrksrc}/linux-${_rc_kern_ver_path}
-  else
-    cd ${wrksrc}/linux-${_kern_ver_path}
-  fi
+  cd ${wrksrc}/linux-${_kern_ver_path}
 
   # Use custom compiler paths if defined
   if [ "$_compiler_name" = "-llvm" ] && [ -n "${CUSTOM_LLVM_PATH}" ]; then
