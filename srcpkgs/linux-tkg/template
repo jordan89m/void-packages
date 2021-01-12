@@ -51,7 +51,7 @@ source ${srcdir}/versel
 # Template file for 'linux${_basever}-tkg-${_cpusched}${_compiler_name}'
 pkgname=linux${_basever}-tkg-${_cpusched}${_compiler_name}
 pkgdesc="Linux-tkg"
-revision=16
+revision=17
 archs="x86_64" # PKGBUILD declares x86_64 only
 python_version=3
 patch_args="-Np1"
@@ -92,7 +92,7 @@ case $_basever in
         54)
 	opt_ver="4.19-v5.4"
 	cpu_opt_sum='27b7fc535ade94b636c3ec4e809e141831e9465a0ef55215a9852b87048629e2'
-	kernel_sum='eb36b5fc6ef7b953acba0a3e62d872e0330c4d34b38d58f5714493a4fe3b0e8b'
+	kernel_sum='4b8007c126c7146f020230fe19ce9924ba3b089c228002dea3ef54abba1824b2'
         source=('config.x86_64' # stock Arch config
                 'config_hardened.x86_64' # hardened Arch config
                 90-cleanup.hook
@@ -302,7 +302,7 @@ case $_basever in
         510)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='904e396c26e9992a16cd1cc989460171536bed7739bf36049f6eb020ee5d56ec'
+	kernel_sum='7767d02c1cb5eb2a8d3c2b15a3f93e85b98baa6e9d93a3b9e3ec0e959d0a690b'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -339,7 +339,7 @@ case $_basever in
             '7058e57fd68367b029adc77f2a82928f1433daaf02c8c279cb2d13556c8804d7'
             'c605f638d74c61861ebdc36ebd4cb8b6475eae2f6273e1ccb2bbb3e10a2ec3fe'
             '2bbbac963b6ca44ef3f8a71ec7c5cad7d66df860869a73059087ee236775970a'
-            '4231bd331289f5678b49d084698f0a80a3ae602eccb41d89e4f85ff4465eb971'
+            'e00096244e5cddaa5500d08b5f692fd3f25be9401dfa3b0fc624625ff2f5e198'
             '62496f9ca788996181ef145f96ad26291282fcc3fb95cdc04080dcf84365be33'
             '31b428c464905e44ed61cdcd1f42b4ec157ebe5a44cb5b608c4c99b466df66ba'
             '06e93b57b7a0b96aefc2c0ec12c3be28c6e8dc8506fa8a22c5a2313814a3c7f3'
@@ -350,12 +350,12 @@ case $_basever in
             'a557b342111849a5f920bbe1c129f3ff1fc1eff62c6bd6685e0972fc88e39911'
             'e308292fc42840a2366280ea7cf26314e92b931bb11f04ad4830276fc0326ee1'
             '49262ce4a8089fa70275aad742fc914baa28d9c384f710c9a62f64796d13e104'
-            '5a1f6a5b9742df0652880a2812f789b24bb73e84edec9fb4a15dd34df7ea5780')
+            '034e3958993a616b98d172d68658e844f7bfd445da742fbce4a24995e5de1d8d')
        ;;
         511)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='005bef7ba4eac87e0ddfe79ecacd22212ae08b87489e0df9e2d45f877f7d5224'
+	kernel_sum='c158fd7a2efa738554d04f281770c65afaef9cab14f1a114ee499fcbe27eae95'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -383,7 +383,7 @@ case $_basever in
                 #0012-linux-hardened.patch
                 0012-misc-additions.patch
         )
-        sha256sums=('4de9d31612a2343ed77cc70e5b7bbbb6d71598496e14d94582a02cec561b883a'
+        sha256sums=('0b4cdd202b5da351bdde626915d040c8255565b8ff647de7c47a8b91ccb33113'
             '1e15fc2ef3fa770217ecc63a220e5df2ddbcf3295eb4a021171e7edd4c6cc898'
             '66a03c246037451a77b4d448565b1d7e9368270c7d02872fbd0b5d024ed0a997'
             'f6383abef027fd9a430fd33415355e0df492cdc3c90e9938bf2d98f4f63b32e6'
