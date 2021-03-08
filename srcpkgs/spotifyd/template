@@ -1,11 +1,11 @@
 # Template file for 'spotifyd'
 pkgname=spotifyd
 version=0.3.0
-revision=2
+revision=3
 build_style=cargo
 configure_args="--no-default-features"
 hostmakedepends="pkg-config"
-makedepends="libressl-devel $(vopt_if alsa alsa-lib-devel)
+makedepends="openssl-devel $(vopt_if alsa alsa-lib-devel)
  $(vopt_if pulseaudio pulseaudio-devel) $(vopt_if portaudio portaudio-devel)
  $(vopt_if dbus dbus-devel)"
 short_desc="Spotify client running as a UNIX daemon"
@@ -16,7 +16,6 @@ distfiles="${homepage}/archive/v${version}.tar.gz"
 checksum=47b3d9a87a9bc8ff5a46b9ba3ccb5ea0b305964c6f334e601a0316697d8bcd4a
 
 build_options="alsa pulseaudio portaudio dbus"
-desc_option_portaudio="Enable PortAudio backend"
 build_options_default="alsa pulseaudio portaudio dbus"
 
 export CFLAGS_${RUST_BUILD//-/_}="${CFLAGS_host}"
