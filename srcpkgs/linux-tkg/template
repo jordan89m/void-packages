@@ -67,7 +67,7 @@ revision=19
 archs="x86_64" # PKGBUILD declares x86_64 only
 python_version=3
 patch_args="-Np1"
-hostmakedepends="schedtool xmlto libressl-devel docbook-xsl kmod inetutils bc libelf patchutils flex python3-Sphinx python3-sphinx_rtd_theme graphviz perl uboot-mkimage cpio gmp-devel libmpc-devel elfutils-devel pahole git zstd tar"
+hostmakedepends="schedtool xmlto openssl-devel docbook-xsl kmod inetutils bc libelf patchutils flex python3-Sphinx python3-sphinx_rtd_theme graphviz perl uboot-mkimage cpio gmp-devel libmpc-devel elfutils-devel pahole git zstd tar"
 makedepends="xz modprobed-db"
 triggers="kernel-hooks"
 
@@ -409,7 +409,7 @@ case $_basever in
         512)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='d57d9b8c595960bc21137c2d6312aca417029cc45a264f500d047ee1270193d5'
+	kernel_sum='fccc4b9e65cbffd5f75ebaed0904df96d10d431c675823875cdde94e40e09d0f'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -433,11 +433,11 @@ case $_basever in
                 #0009-glitched-ondemand-bmq.patch
                 #0009-glitched-bmq.patch
                 #0009-prjc_v5.10-r0.patch
-                0011-ZFS-fix.patch
+                #0011-ZFS-fix.patch
                 #0012-linux-hardened.patch
                 #0012-misc-additions.patch
         )
-        sha256sums=('5cc3767b4005fc21c53863ceda75f287a9d2be772dbdee861a5cbec9cc62c1bd'
+        sha256sums=('a48dc999e51763db63a1e52a8a2cc23b4116fbf03a731b999878da8578598115'
             '1e15fc2ef3fa770217ecc63a220e5df2ddbcf3295eb4a021171e7edd4c6cc898'
             '66a03c246037451a77b4d448565b1d7e9368270c7d02872fbd0b5d024ed0a997'
             'f6383abef027fd9a430fd33415355e0df492cdc3c90e9938bf2d98f4f63b32e6'
