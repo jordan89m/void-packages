@@ -1,6 +1,6 @@
 # Template file for 'kwrited'
 pkgname=kwrited
-version=5.21.1
+version=5.21.3
 revision=1
 build_style=cmake
 configure_args="-DBUILD_TESTING=OFF"
@@ -11,4 +11,4 @@ maintainer="John <me@johnnynator.dev>"
 license="GPL-2.0-or-later"
 homepage="https://invent.kde.org/plasma/kwrited"
 distfiles="${KDE_SITE}/plasma/${version}/${pkgname}-${version}.tar.xz"
-checksum=03665581469869162ce4ec355ab3d3882804dfba986caee4bf1c918efb94ba97
+checksum=ddccbb23c1ce510efc4f84cf4a59fc1aaa7f344e8d24b35b4603a3583149d606
