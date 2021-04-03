@@ -1,13 +1,12 @@
 # Template file for 'pipewire'
 pkgname=pipewire
 version=0.3.24
-revision=1
+revision=2
 build_style=meson
 configure_args="-Dman=enabled -Dgstreamer=enabled -Ddocs=enabled -Dsystemd=disabled
  -Dbluez5=enabled -Dffmpeg=enabled -Dpipewire-alsa=enabled -Dpipewire-jack=enabled
  -Dvulkan=enabled -Dudevrulesdir=/usr/lib/udev/rules.d"
 hostmakedepends="doxygen graphviz pkg-config xmltoman gettext"
-# LDAC support can be enabled when ldacbt is packaged
 makedepends="SDL2-devel ffmpeg-devel gst-plugins-base1-devel jack-devel
  sbc-devel v4l-utils-devel libva-devel libbluetooth-devel ncurses-devel
  libopenaptx-devel fdk-aac-devel"
@@ -26,6 +25,10 @@ replaces="libpulseaudio-pipewire>=0"
 if [ "$XBPS_TARGET_NO_ATOMIC8" ]; then
 	makedepends+=" libatomic-devel"
 	LDFLAGS+=" -latomic"
+fi
+
+if [ "$XBPS_TARGET_ENDIAN" = "le" ]; then
+	makedepends+=" ldacBT-devel"
 fi
 
 post_install() {
