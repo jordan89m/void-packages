@@ -205,7 +205,7 @@ case $_basever in
         ;;
         58)
         opt_ver="5.8+"
-	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
+	cpu_opt_sum='9083b94bf9f547cceeed9fe2f37fb201e42d5b00734a86e4ea528447a59d4b9a'
 	kernel_sum='4ab4a3f694b7b4cfbe78871eab34c8039ad33692144c45c669827a594da85534'
         source=(config.x86_64 # stock Arch config
                 #config_hardened.x86_64 # hardened Arch config
@@ -257,7 +257,7 @@ case $_basever in
         ;;
         59)
         opt_ver="5.8+"
-	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
+	cpu_opt_sum='9083b94bf9f547cceeed9fe2f37fb201e42d5b00734a86e4ea528447a59d4b9a'
 	kernel_sum='b0d7abae88e5f91893627c645e680a95c818defd1b4fcaf3e2afb4b2b6b4ab86'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
@@ -312,7 +312,7 @@ case $_basever in
         ;;
         510)
         opt_ver="5.8+"
-	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
+	cpu_opt_sum='9083b94bf9f547cceeed9fe2f37fb201e42d5b00734a86e4ea528447a59d4b9a'
 	kernel_sum='158c6746c11a90645b4d40bdb5c049d9fac7e4c9ed381c9b7aa94db1a8e7e9ec'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
@@ -365,7 +365,7 @@ case $_basever in
        ;;
         511)
         opt_ver="5.8+"
-	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
+	cpu_opt_sum='9083b94bf9f547cceeed9fe2f37fb201e42d5b00734a86e4ea528447a59d4b9a'
 	kernel_sum='fa61193d24f2cdb1290158299f7041a7bc41090ec536af0d78a4d5ea029b6f7b'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
@@ -408,7 +408,7 @@ case $_basever in
        ;;
         512)
         opt_ver="5.8+"
-	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
+	cpu_opt_sum='9083b94bf9f547cceeed9fe2f37fb201e42d5b00734a86e4ea528447a59d4b9a'
 	kernel_sum='5acdd08104a3e1c332ef708a6b0c39f579d5e930ff4ab0e2e90bfcb886f39e31'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
@@ -474,7 +474,7 @@ if [ ! -e ${srcdir}/sum_check ]; then
 fi
 
 distfiles="${kernel_site}
-https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v10.1+_kernel_v${opt_ver}.patch"
+https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/more-uarches-for-kernel-${opt_ver}.patch"
 checksum="${kernel_sum}
 ${cpu_opt_sum}"
 nostrip=yes
