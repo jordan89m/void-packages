@@ -35,8 +35,8 @@ if [ ! -e ${srcdir}/linux-tkg ]; then
 fi
 
 source ${_files}/customization.cfg
-#source ${_where}/linux-tkg-config/prepare
-source ${_files}/prepare
+source ${_where}/linux-tkg-config/prepare
+#source ${_files}/prepare
 
 if [ ! -e ${srcdir}/run_check ]; then
   _tkg_initscript
@@ -104,7 +104,7 @@ case $_basever in
         54)
 	opt_ver="4.19-v5.4"
 	cpu_opt_sum='27b7fc535ade94b636c3ec4e809e141831e9465a0ef55215a9852b87048629e2'
-	kernel_sum='646736bc063f181c22648934f0dc3d97d49aec6edfd7358d2fe3df29fb66fa1a'
+	kernel_sum='21626132658dc34cb41b7aa7b80ecf83751890a71ac1a63d77aea9d488271a03'
         source=('config.x86_64' # stock Arch config
                 'config_hardened.x86_64' # hardened Arch config
                 90-cleanup.hook
@@ -129,7 +129,7 @@ case $_basever in
                 0011-ZFS-fix.patch
                 0012-linux-hardened.patch
         )
-        sha256sums=('55dd5117c1da17c9ec38d7bc995958958bcc8b7ebcfd81de1d4c7650b85537ab'
+        sha256sums=('be2066dd6133357007e8c7da9d5de3194b13409ebbfba8821db1849588fced1e'
             '1f4a20d6eaaa0d969af93152a65191492400c6aa838fc1c290b0dd29bb6019d8'
             '1e15fc2ef3fa770217ecc63a220e5df2ddbcf3295eb4a021171e7edd4c6cc898'
             '66a03c246037451a77b4d448565b1d7e9368270c7d02872fbd0b5d024ed0a997'
@@ -313,7 +313,7 @@ case $_basever in
         510)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='06698c0ce35ceefa9b79ceb108ec7fb86de05f51fe615f3ae5cc82e293dfe1f2'
+	kernel_sum='158c6746c11a90645b4d40bdb5c049d9fac7e4c9ed381c9b7aa94db1a8e7e9ec'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -341,7 +341,7 @@ case $_basever in
                 #0012-linux-hardened.patch
                 0012-misc-additions.patch
         )
-        sha256sums=('458d1ca195f3fee5501683a4b61ef0ed0cfa7e5219eccab3390fb40c0289898a'
+        sha256sums=('4720ffe4c063ec948918cadf7498e96be8a035717e587b4c949d3c2a4471d5d9'
             '1e15fc2ef3fa770217ecc63a220e5df2ddbcf3295eb4a021171e7edd4c6cc898'
             '66a03c246037451a77b4d448565b1d7e9368270c7d02872fbd0b5d024ed0a997'
             'f6383abef027fd9a430fd33415355e0df492cdc3c90e9938bf2d98f4f63b32e6'
@@ -366,7 +366,7 @@ case $_basever in
         511)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='0a7875613823a57e7f9a937eb0ff098cbd8a2ff0d93e18171b8afeac09f583b9'
+	kernel_sum='fa61193d24f2cdb1290158299f7041a7bc41090ec536af0d78a4d5ea029b6f7b'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -409,7 +409,7 @@ case $_basever in
         512)
         opt_ver="5.8+"
 	cpu_opt_sum='126cd35b1153b69dd8d713f902d09ecc64ce8af2e4fa6f021219a65e62e13875'
-	kernel_sum='d50e17bbef66e6a52342f0e1fa16fae1400030bd7159787dca51f834f1780618'
+	kernel_sum='5acdd08104a3e1c332ef708a6b0c39f579d5e930ff4ab0e2e90bfcb886f39e31'
         source=("config.x86_64" # stock Arch config
                 #$hardened_config_file # hardened Arch config
                 90-cleanup.hook
@@ -437,7 +437,7 @@ case $_basever in
                 #0012-linux-hardened.patch
                 #0012-misc-additions.patch
         )
-        sha256sums=('1e560c6ca7fc8291afe742ded288ef10b2a0e858418bc523b6b092cffbe125e6'
+        sha256sums=('84e8ad516fad66514ea6b430345b261118f571c93b0c7358d1bc3291ced11c82'
             '1e15fc2ef3fa770217ecc63a220e5df2ddbcf3295eb4a021171e7edd4c6cc898'
             '66a03c246037451a77b4d448565b1d7e9368270c7d02872fbd0b5d024ed0a997'
             'f6383abef027fd9a430fd33415355e0df492cdc3c90e9938bf2d98f4f63b32e6'
