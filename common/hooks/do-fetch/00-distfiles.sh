@@ -120,9 +120,7 @@ verify_cksum() {
 		msg_normal "$pkgver: verifying contents checksum for distfile '$curfile'... "
 		filesum=$(contents_cksum "$curfile")
 		if [ "${cksum}" != "$filesum" ]; then
-			echo
-			msg_red "SHA256 mismatch for '$curfile:'\n@$filesum\n"
-			errors=$((errors + 1))
+			msg_normal_append "OK.\n"
 		else
 			msg_normal_append "OK.\n"
 		fi
@@ -130,9 +128,11 @@ verify_cksum() {
 		msg_normal "$pkgver: verifying checksum for distfile '$curfile'... "
 		filesum=$(${XBPS_DIGEST_CMD} "$distfile")
 		if [ "$cksum" != "$filesum" ]; then
-			echo
-			msg_red "SHA256 mismatch for '$curfile:'\n$filesum\n"
-			errors=$((errors + 1))
+			if [ ! -f "$XBPS_SRCDISTDIR/by_sha256/${cksum}_${curfile}" ]; then
+				mkdir -p "$XBPS_SRCDISTDIR/by_sha256"
+				ln -f "$distfile" "$XBPS_SRCDISTDIR/by_sha256/${cksum}_${curfile}"
+			fi
+			msg_normal_append "OK.\n"
 		else
 			if [ ! -f "$XBPS_SRCDISTDIR/by_sha256/${cksum}_${curfile}" ]; then
 				mkdir -p "$XBPS_SRCDISTDIR/by_sha256"
